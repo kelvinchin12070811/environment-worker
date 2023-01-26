@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 APPS = [
+  { name: 'Bottom', id: 'Clement.bottom' },
   { name: 'Mozilla Firefox', id: 'Mozilla.Firefox' },
   { name: 'Visual Studio Code', id: 'Microsoft.VisualStudioCode' },
   { name: 'KeePassXC', id: 'KeePassXCTeam.KeePassXC' },
