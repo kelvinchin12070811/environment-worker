@@ -11,7 +11,7 @@ puts "Stage 1: Winget -- #{APPS.length} apps to install."
 
 APPS.each_with_index do |app, index|
   puts "#{index + 1} of #{APPS.length}: Installing #{app[:name]} via winget..."
-  # system "winget install --id \"#{app[:id]}\""
+  system "winget install --id \"#{app[:id]}\""
   puts ''
 end
 
