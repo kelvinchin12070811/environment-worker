@@ -29,11 +29,13 @@ Dir.mkdir(TEMP_WORKSPACE_NAME)
 Dir.chdir(TEMP_WORKSPACE_NAME)
 
 custom_plans = Dir.children('../custom-installations')
-custom_plans.each_with_index do |plan, index|
-  print "#{index + 1} of #{custom_plans.length}: "
-  require_relative "./custom-installations/#{plan}"
-  puts ''
-end
+# custom_plans.each_with_index do |plan, index|
+#   print "#{index + 1} of #{custom_plans.length}: "
+#   require_relative "./custom-installations/#{plan}"
+#   puts ''
+# end
+require_relative './custom-installations/yt_dlp'
+puts ''
 
 Dir.chdir('..')
 
