@@ -34,7 +34,7 @@ custom_plans = Dir.children('../custom-installations')
 #   require_relative "./custom-installations/#{plan}"
 #   puts ''
 # end
-require_relative './custom-installations/yt_dlp'
+require_relative './custom-installations/lf'
 puts ''
 
 Dir.chdir('..')
