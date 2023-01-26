@@ -16,7 +16,7 @@ selected = gets.chop
 selected = selected.empty? ? INSTALL_PATH : selected
 puts "Installing lf in #{selected}"
 
-FileUtils.mkdir(current_path) unless Dir.exist?(current_path)
+FileUtils.mkdir(selected) unless Dir.exist?(selected)
 FileUtils.cd(selected)
 
 puts 'Cloing required scripts...'
