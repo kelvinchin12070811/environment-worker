@@ -30,5 +30,6 @@ APPS = [
   { name: 'IntelliJ IDEA Community Edition', id: 'JetBrains.IntelliJIDEA.Community' },
   { name: 'Shotcut', id: 'Meltytech.Shotcut' },
   { name: 'Krita', id: 'KDE.Krita' },
-  { name: 'KritaShellExtension', id: 'KDE.KritaShellExtension' }
+  { name: 'KritaShellExtension', id: 'KDE.KritaShellExtension' },
+  { name: 'Eclipse Temurin JDK with Hotspot 17', id: 'EclipseAdoptium.Temurin.17.JDK' }
 ].freeze
