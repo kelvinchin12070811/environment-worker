@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 APPS = [
+  { name: 'Oh My Posh', id: 'JanDeDobbeleer.OhMyPosh' },
   { name: 'Bottom', id: 'Clement.bottom' },
   { name: 'Mozilla Firefox', id: 'Mozilla.Firefox' },
   { name: 'Visual Studio Code', id: 'Microsoft.VisualStudioCode' },
@@ -19,8 +20,8 @@ APPS = [
   { name: 'Microsoft PowerToys', id: 'Microsoft.PowerToys' },
   { name: 'NVM for Windows', id: 'CoreyButler.NVMforWindows' },
   { name: 'Steam', id: 'Valve.Steam' },
-  { name: 'PowerShell', id: 'Microsoft.PowerShell' },
-  { name: 'Windows Terminal', id: '9N0DX20HK701' },
+  # { name: 'PowerShell', id: 'Microsoft.PowerShell' },
+  # { name: 'Windows Terminal', id: '9N0DX20HK701' },
   { name: 'Telegram Desktop', id: 'Telegram.TelegramDesktop' },
   { name: 'NordVPN', id: 'NordVPN.NordVPN' },
   { name: 'NordLocker', id: 'Nord.NordLocker' },
@@ -41,5 +42,6 @@ APPS = [
   { name: 'Audacity', id: 'Audacity.Audacity' },
   { name: 'CrystalDiskInfo Kurei Kei Edition', id: 'CrystalDewWorld.CrystalDiskInfo.KureiKeiEdition' },
   { name: 'CrystalDiskMark Shizuku Edition', id: 'CrystalDewWorld.CrystalDiskMark.ShizukuEdition' },
-  { name: 'Netflix', id: '9WZDNCRFJ3TJ' }
+  { name: 'Netflix', id: '9WZDNCRFJ3TJ' },
+  { name: 'WhatsApp', id: '9NKSQGP7F2NH' }
 ].freeze
