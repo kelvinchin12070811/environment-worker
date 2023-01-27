@@ -36,5 +36,10 @@ APPS = [
   { name: 'YubiKey Manager', id: 'YubiKey Manager' },
   { name: 'Inkscape', id: 'Inkscape.Inkscape' },
   { name: 'OBS Studio', id: 'OBSProject.OBSStudio' },
-  { name: 'GNU Privacy Guard', id: 'GnuPG.GnuPG' }
+  { name: 'GNU Privacy Guard', id: 'GnuPG.GnuPG' },
+  { name: 'BlueStacks', id: 'BlueStack.BlueStacks' },
+  { name: 'Audacity', id: 'Audacity.Audacity' },
+  { name: 'CrystalDiskInfo Kurei Kei Edition', id: 'CrystalDewWorld.CrystalDiskInfo.KureiKeiEdition' },
+  { name: 'CrystalDiskMark Shizuku Edition', id: 'CrystalDewWorld.CrystalDiskMark.ShizukuEdition' },
+  { name: 'Netflix', id: '9WZDNCRFJ3TJ' }
 ].freeze
