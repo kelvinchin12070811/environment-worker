@@ -1,0 +1,18 @@
+#! /usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'open-uri'
+require 'json'
+require 'fileutils'
+
+require_relative './winget_apps_list'
+
+puts "Winget -- #{APPS.length} apps to install."
+
+APPS.each_with_index do |app, index|
+  puts "#{index + 1} of #{APPS.length}: Installing #{app[:name]} via winget..."
+  system "winget install --id \"#{app[:id]}\""
+  puts ''
+end
+
+puts 'Installation done.'

@@ -1,26 +1,9 @@
 #! /usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'open-uri'
-require 'json'
 require 'fileutils'
 
-require_relative './winget_apps_list'
-
-puts "Stage 1: Winget -- #{APPS.length} apps to install."
-
-APPS.each_with_index do |app, index|
-  puts "#{index + 1} of #{APPS.length}: Installing #{app[:name]} via winget..."
-  system "winget install --id \"#{app[:id]}\""
-  puts ''
-end
-
-puts 'Stage 1 done.'
-puts 'Script paused, check environment before proceed.'
-system 'pause'
-puts ''
-
-puts 'Stage 2: Custom installations'
+puts 'Custom installations for non winget apps'
 puts ''
 
 TEMP_WORKSPACE_NAME = 'temp-workspace'

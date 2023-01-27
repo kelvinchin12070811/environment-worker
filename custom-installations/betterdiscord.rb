@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require 'open-uri'
+require 'json'
+
 puts 'Installing Better Discord...'
 better_discord_releases = URI.open('https://api.github.com/repos/BetterDiscord/Installer/releases/latest').read
 better_discord_assets = JSON.parse(better_discord_releases)['assets']

@@ -31,5 +31,10 @@ APPS = [
   { name: 'Shotcut', id: 'Meltytech.Shotcut' },
   { name: 'Krita', id: 'KDE.Krita' },
   { name: 'KritaShellExtension', id: 'KDE.KritaShellExtension' },
-  { name: 'Eclipse Temurin JDK with Hotspot 17', id: 'EclipseAdoptium.Temurin.17.JDK' }
+  { name: 'Eclipse Temurin JDK with Hotspot 17', id: 'EclipseAdoptium.Temurin.17.JDK' },
+  { name: 'ImageGlass', id: 'DuongDieuPhap.ImageGlass' },
+  { name: 'YubiKey Manager', id: 'YubiKey Manager' },
+  { name: 'Inkscape', id: 'Inkscape.Inkscape' },
+  { name: 'OBS Studio', id: 'OBSProject.OBSStudio' },
+  { name: 'GNU Privacy Guard', id: 'GnuPG.GnuPG' }
 ].freeze
