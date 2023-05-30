@@ -67,5 +67,6 @@ else
   FileUtils.rm_r(TEMP_WORKSPACE_NAME) if Dir.exist?(TEMP_WORKSPACE_NAME)
   Dir.mkdir(TEMP_WORKSPACE_NAME)
   Dir.chdir(TEMP_WORKSPACE_NAME)
-  require("./custom-installations/#{package}.rb")
+  require_relative "./custom-installations/#{package}.rb"
+  puts 'Instalation done!'
 end
