@@ -3,25 +3,69 @@
 
 require 'fileutils'
 
+TEMP_WORKSPACE_NAME = 'temp-workspace'
+
+def print_help
+  puts 'Usage: install_custom_apps.rb [args]'
+  puts 'Use without args to install all packages'
+  puts ''
+  puts 'Args:'
+  puts '  --casks -c <package> := Install a selected package.'
+  puts '  --list -l := List all packages.'
+  puts '  --help -h := Print this help.'
+end
+
 puts 'Custom installations for non winget apps'
 puts ''
 
-TEMP_WORKSPACE_NAME = 'temp-workspace'
-FileUtils.rm_r(TEMP_WORKSPACE_NAME) if Dir.exist?(TEMP_WORKSPACE_NAME)
-Dir.mkdir(TEMP_WORKSPACE_NAME)
-Dir.chdir(TEMP_WORKSPACE_NAME)
+if ARGV.length <= 0
+  FileUtils.rm_r(TEMP_WORKSPACE_NAME) if Dir.exist?(TEMP_WORKSPACE_NAME)
+  Dir.mkdir(TEMP_WORKSPACE_NAME)
+  Dir.chdir(TEMP_WORKSPACE_NAME)
 
-custom_plans = Dir.children('../custom-installations')
-custom_plans.each_with_index do |plan, index|
-  print "#{index + 1} of #{custom_plans.length}: "
-  require_relative "./custom-installations/#{plan}"
+  custom_plans = Dir.children('../custom-installations')
+  custom_plans.each_with_index do |plan, index|
+    print "#{index + 1} of #{custom_plans.length}: "
+    require_relative "./custom-installations/#{plan}"
+    puts ''
+  end
   puts ''
+
+  Dir.chdir('..')
+
+  puts 'Stage 2 done.'
+  puts ''
+
+  puts 'Installation done.'
+else
+  switch = ARGV[0]
+  if ['--help', '-h'].include?(switch)
+    print_help
+    exit 0
+  end
+
+  if ['--list', '-l'].include?(switch)
+    puts 'Avaliable packages:'
+    Dir.children('./custom-installations').each_with_index do |plan, index|
+      puts "#{index + 1}. #{plan.split('.')[0]}"
+    end
+
+    exit 0
+  end
+
+  unless ['--casks', '-c'].include?(switch)
+    puts 'Invalid switch'
+    exit 1
+  end
+
+  package = ARGV[1]
+  if package.nil? || package.empty?
+    puts 'Invalid package, use --help or -h to get help message.'
+    exit 1
+  end
+
+  FileUtils.rm_r(TEMP_WORKSPACE_NAME) if Dir.exist?(TEMP_WORKSPACE_NAME)
+  Dir.mkdir(TEMP_WORKSPACE_NAME)
+  Dir.chdir(TEMP_WORKSPACE_NAME)
+  require("./custom-installations/#{package}.rb")
 end
-puts ''
-
-Dir.chdir('..')
-
-puts 'Stage 2 done.'
-puts ''
-
-puts 'Installation done.'
