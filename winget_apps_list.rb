@@ -14,7 +14,6 @@ APPS = [
   { name: 'Visual Studio Community 2022', id: 'Microsoft.VisualStudio.2022.Community' },
   { name: 'Dolby Access', id: '9N0866FS04W8' },
   { name: 'Character Map UWP', id: '9WZDNCRDXF41' },
-  { name: 'EarTrumpet', id: '9NBLGGH516XP' },
   { name: 'TranslucentTB', id: '9PF4KZ2VN4W9' },
   { name: 'Microsoft PowerToys', id: 'Microsoft.PowerToys' },
   { name: 'NVM for Windows', id: 'CoreyButler.NVMforWindows' },
