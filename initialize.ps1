@@ -3,9 +3,10 @@ $portable_tools_path = "C:\Portable Program Files"
 Write-Host "Jump starting environment..."
 
 New-Item -Type Directory $portable_tools_path
-winget install --id RubyInstallerTeam.RubyWithDevKit.3.2
+winget install --id RubyInstallerTeam.RubyWithDevKit.3.1
 winget install --id gerardog.gsudo
 winget install --id Git.Git
+winget install --id Microsoft.PowerShell
 
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" +
 [System.Environment]::GetEnvironmentVariable("Path", "User")

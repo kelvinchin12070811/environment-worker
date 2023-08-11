@@ -4,11 +4,7 @@
 require 'fileutils'
 
 SYMLINK_PATH = [
-  { src: 'Better Discord\\Plugins', dest: 'AppData\\Roaming\\betterdiscord\\plugins' },
-  { src: 'Better Discord\\Themes', dest: 'AppData\\Roaming\\betterdiscord\\themes' },
   { src: 'Git Configs\\Main Config.gitconfig', dest: '.gitconfig' },
-  { src: 'Vim\\Default\\.vimrc', dest: '.vimrc' },
-  { src: 'Vim\\Default\\.vimrc', dest: '.ideavimrc' }
 ].freeze
 
 puts 'Enter Dropbox folder path: '
